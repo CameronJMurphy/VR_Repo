@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2349494982391766869}
   - component: {fileID: 7895043283319901908}
   - component: {fileID: -119789698729254984}
+  - component: {fileID: 2189870501290025101}
   m_Layer: 0
   m_Name: ulfberht
   m_TagString: Untagged
@@ -123,3 +124,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d95de3d361bfd4391eccaa6defe6ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
+--- !u!114 &2189870501290025101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7055441703947715430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e8b9b9f2251f6479c72febfb68c2b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colourChange: {x: 1, y: 1, z: 0, w: 0.5}
+  target: {fileID: 880628543993724751, guid: 6a64847bc40d872478ce6d1e2c2b4d35, type: 3}
