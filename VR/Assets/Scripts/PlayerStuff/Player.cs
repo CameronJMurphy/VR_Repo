@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public static Player instance;
     public int maxHealth = 5;
     int currentHealth;
+    bool Invulnerable = false;
     private void Awake()
     {
         instance = this;
@@ -15,7 +16,10 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
-        currentHealth -= dmg;
+        if (!Invulnerable)
+        {
+            currentHealth -= dmg;
+        }
     }
 
     public void Heal(int amount)
@@ -31,4 +35,11 @@ public class Player : MonoBehaviour
     {
         return currentHealth;
     }
+
+    public void MakeInvulnerable(bool answer)
+	{
+        Invulnerable = answer;
+	}
+
+    
 }

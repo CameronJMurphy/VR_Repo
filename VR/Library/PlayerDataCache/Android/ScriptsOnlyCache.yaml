@@ -3,6 +3,8 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Death
     - DisplayHealth
+    - GameController
+    - GlowRedCloser
     - GoogleVR.Demos.DemoInputManager
     - GoogleVR.Demos.DemoSceneManager
     - GoogleVR.HelloVR.HeadsetDemoManager
@@ -23,12 +25,14 @@ ScriptsOnlyBuild:
     - GvrTrackedController
     - InstantPreviewHelper
     - Player
+    - ScreenWobble
+    - SineWave
     - Slap
     - StartScreen
     - Strawberry
     - StrawberrySpawner
-    - Sword
     - SwordSpawner
+    - Weapon
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -93,73 +97,81 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11256}
+      Script: {instanceID: 11258}
     - Class: 114
-      Script: {instanceID: 11294}
+      Script: {instanceID: 11296}
     - Class: 114
-      Script: {instanceID: 11332}
+      Script: {instanceID: 11334}
     - Class: 114
-      Script: {instanceID: 11446}
-    - Class: 114
-      Script: {instanceID: 11490}
+      Script: {instanceID: 11448}
     - Class: 114
       Script: {instanceID: 11492}
     - Class: 114
-      Script: {instanceID: 11618}
+      Script: {instanceID: 11494}
     - Class: 114
-      Script: {instanceID: 11638}
+      Script: {instanceID: 11590}
     - Class: 114
-      Script: {instanceID: 11670}
+      Script: {instanceID: 11624}
     - Class: 114
-      Script: {instanceID: 11688}
+      Script: {instanceID: 11644}
     - Class: 114
-      Script: {instanceID: 11780}
+      Script: {instanceID: 11676}
     - Class: 114
-      Script: {instanceID: 11820}
+      Script: {instanceID: 11694}
     - Class: 114
-      Script: {instanceID: 11924}
+      Script: {instanceID: 11786}
     - Class: 114
-      Script: {instanceID: 11942}
+      Script: {instanceID: 11826}
     - Class: 114
-      Script: {instanceID: 12290}
+      Script: {instanceID: 11930}
     - Class: 114
-      Script: {instanceID: 12328}
+      Script: {instanceID: 11948}
     - Class: 114
-      Script: {instanceID: 12356}
+      Script: {instanceID: 12296}
     - Class: 114
-      Script: {instanceID: 12526}
+      Script: {instanceID: 12334}
     - Class: 114
-      Script: {instanceID: 12642}
+      Script: {instanceID: 12362}
     - Class: 114
-      Script: {instanceID: 12676}
+      Script: {instanceID: 12452}
+    - Class: 114
+      Script: {instanceID: 12534}
+    - Class: 114
+      Script: {instanceID: 12582}
+    - Class: 114
+      Script: {instanceID: 12652}
     - Class: 114
       Script: {instanceID: 12686}
     - Class: 114
-      Script: {instanceID: 12738}
+      Script: {instanceID: 12696}
     - Class: 114
-      Script: {instanceID: 12776}
+      Script: {instanceID: 12748}
     - Class: 114
-      Script: {instanceID: 12780}
+      Script: {instanceID: 12786}
     - Class: 114
-      Script: {instanceID: 12852}
+      Script: {instanceID: 12790}
     - Class: 114
-      Script: {instanceID: 12884}
+      Script: {instanceID: 12862}
     - Class: 114
-      Script: {instanceID: 12908}
+      Script: {instanceID: 12894}
     - Class: 114
-      Script: {instanceID: 12952}
+      Script: {instanceID: 12918}
     - Class: 114
-      Script: {instanceID: 12986}
+      Script: {instanceID: 12962}
     - Class: 114
-      Script: {instanceID: 13000}
+      Script: {instanceID: 12996}
     - Class: 114
-      Script: {instanceID: 13290}
+      Script: {instanceID: 13010}
     - Class: 114
-      Script: {instanceID: 13374}
+      Script: {instanceID: 13112}
     - Class: 114
-      Script: {instanceID: 13386}
+      Script: {instanceID: 13308}
     - Class: 114
-      Script: {instanceID: 13398}
+      Script: {instanceID: 13392}
+    - Class: 114
+      Script: {instanceID: 13404}
+    - Class: 114
+      Script: {instanceID: 13416}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -214,27 +226,27 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11256}
+      Script: {instanceID: 11258}
     - Class: 114
-      Script: {instanceID: 11490}
+      Script: {instanceID: 11492}
     - Class: 114
-      Script: {instanceID: 11942}
+      Script: {instanceID: 11948}
     - Class: 114
-      Script: {instanceID: 11968}
+      Script: {instanceID: 11974}
     - Class: 114
-      Script: {instanceID: 12642}
+      Script: {instanceID: 12652}
     - Class: 114
-      Script: {instanceID: 12658}
+      Script: {instanceID: 12668}
     - Class: 114
-      Script: {instanceID: 12884}
+      Script: {instanceID: 12894}
     - Class: 114
-      Script: {instanceID: 12952}
+      Script: {instanceID: 12962}
     - Class: 114
-      Script: {instanceID: 13094}
+      Script: {instanceID: 13106}
     - Class: 114
-      Script: {instanceID: 13132}
+      Script: {instanceID: 13148}
     - Class: 114
-      Script: {instanceID: 13364}
+      Script: {instanceID: 13382}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -380,10 +392,22 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Rotate
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 086a608310b9a6888f08af56499d1544
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameController
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -482,10 +506,10 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 2a2d7b828da8a3c9b45cde8b8c2e6fa1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Sword
+    className: Weapon
   - hash:
       serializedVersion: 2
       Hash: ed916f285d5522ec5ceb6eccef8d0072
@@ -632,6 +656,12 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 4988ccc428c0a3d83b08d4f9c7380bf8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SineWave
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -648,6 +678,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleVR.Beta
     className: GvrBetaHeadset
+  - hash:
+      serializedVersion: 2
+      Hash: 93ab62151e84e0a21bda0ca50f0acdec
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GlowRedCloser
   - hash:
       serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
@@ -716,7 +752,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 69e356fa63042f4e2e149cbc59413a8e
+      Hash: a8f69397af02142cbaa39ac754317ffe
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SwordSpawner
@@ -812,10 +848,22 @@ ScriptsOnlyBuild:
     className: fruits_tester
   - hash:
       serializedVersion: 2
+      Hash: 13ec1fbb0991ade13261f246055b927b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AlwaysFace
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StartScreen
+  - hash:
+      serializedVersion: 2
+      Hash: 61d7efbf423b57a5641230a103a64d74
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScreenWobble
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -864,6 +912,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshPro
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CreateShockWave_AtGameObject
   - hash:
       serializedVersion: 2
       Hash: 3165968ba45c74472d279ba04455fccb
@@ -1006,4 +1060,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/StartScreen.unity
   - Assets/GrassFlowers/Demo/DemoGrassFlowers.unity
-  playerPath: E:/AIE/VR/VR/bin/Dont Eat SwordsV_0.2.apk
+  playerPath: E:/School/AIE New/VR/VR_Repo/VR/bin/Dont Eat Swords Prototype1.apk

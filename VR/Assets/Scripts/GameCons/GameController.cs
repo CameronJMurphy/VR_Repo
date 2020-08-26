@@ -7,12 +7,12 @@ public class GameController : MonoBehaviour
     float timer;
     [SerializeField] private float difficultyIncreaseTime;
     [SerializeField] private float reduceTimerBy;
-    List<SwordSpawner> spawners;
+    List<Spawner> spawners;
     // Start is called before the first frame update
     void Start()
     {
         timer = 0;
-        spawners = new List<SwordSpawner>(FindObjectsOfType<SwordSpawner>());
+        spawners = new List<Spawner>(FindObjectsOfType<Spawner>());
     }
 
     // Update is called once per frame

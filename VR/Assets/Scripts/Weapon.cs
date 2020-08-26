@@ -24,4 +24,9 @@ public class Weapon : MonoBehaviour
             active = false;
         }
     }
+
+	private void OnBecameInvisible()
+	{
+        Destroy(gameObject);
+	}
 }

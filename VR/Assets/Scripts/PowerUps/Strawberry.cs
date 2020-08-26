@@ -7,13 +7,19 @@ public class Strawberry : MonoBehaviour
 {
     bool active = true;
     public static Action onHitStrawberry = delegate {};
+    MeshRenderer renderer;
+	private void Start()
+	{
 
-    private void OnCollisionEnter(Collision collision)
+    }
+	private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Hand" && active)
         {
+            renderer = GetComponent<MeshRenderer>();
             active = false;
             onHitStrawberry();
+            renderer.material.SetColor("_Color", new Vector4(0,1,0,1));
         }
     }
 
@@ -25,4 +31,10 @@ public class Strawberry : MonoBehaviour
             active = false;
         }
     }
+
+
+    private void OnBecameInvisible()
+	{
+        Destroy(gameObject);
+	}
 }
