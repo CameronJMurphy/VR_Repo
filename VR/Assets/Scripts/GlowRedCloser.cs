@@ -21,6 +21,7 @@ public class GlowRedCloser : MonoBehaviour
         ourPosition = transform.position;
         startPosition = ourPosition;
         targetsPosition = target.transform.position;
+
         distance = DistanceBetween(startPosition, targetsPosition);
     }
 
@@ -49,6 +50,6 @@ public class GlowRedCloser : MonoBehaviour
 
     float easeInExpo(float t)
     {
-        return Mathf.Pow(2, (10 * t - 9));
+        return Mathf.Pow(2, (10 * t - 9 ));
     }
 }

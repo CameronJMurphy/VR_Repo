@@ -16,9 +16,9 @@ public class ClearWeapons : MonoBehaviour
     {
         foreach (var spawner in spawners)
         {
-            foreach (var weapon in spawner.GetComponentsInChildren<Weapon>())
+            foreach (var obj in spawner.GetComponentsInChildren<GameObject>())
             {
-                Destroy(weapon.gameObject);
+                Destroy(obj.gameObject);
             }
         }
     }

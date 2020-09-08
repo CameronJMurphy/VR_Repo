@@ -5,6 +5,18 @@ EditorUserSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
   m_ConfigSettings:
+    vcPerforcePassword:
+      value: 1350471550075f02
+      flags: 1
+    vcPerforceServer:
+      value: 135446000a470a5e430f05275e265b0558160d707d7e7066
+      flags: 0
+    vcPerforceUsername:
+      value: 10000d5750055e
+      flags: 0
+    vcPerforceWorkspace:
+      value: 2e505e091704
+      flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0

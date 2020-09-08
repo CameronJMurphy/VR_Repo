@@ -14,6 +14,7 @@ public class Bomb : MonoBehaviour
         {
             active = false;
             onHitBomb();
+            GetComponent<BoxCollider>().enabled = false;
         }
     }
 
@@ -23,6 +24,7 @@ public class Bomb : MonoBehaviour
         {
             Player.instance.TakeDamage(damage);
             active = false;
+            GetComponent<BoxCollider>().enabled = false;
         }
     }
 

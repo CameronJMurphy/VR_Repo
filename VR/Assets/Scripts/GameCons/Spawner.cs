@@ -10,6 +10,7 @@ public class Spawner : MonoBehaviour
     public GameObject obj;
     float timer = 0;
     [SerializeField] private float timerMax;
+    private float timerMaxHolder;
     [SerializeField][Min(1)] private float minTimer;
 
 	#endregion
@@ -17,6 +18,7 @@ public class Spawner : MonoBehaviour
 	#region Methods
 	private void Start()
 	{
+        timerMaxHolder = timerMax;
 		if(minTimer > timerMax)
 		{
             Debug.LogError(gameObject.name + "- Spawner script: Min timer is larger than timerMax");
@@ -41,5 +43,9 @@ public class Spawner : MonoBehaviour
             timerMax = minTimer;
 		}
 	}
+    public void ResetTimerMax()
+	{
+        timerMax = timerMaxHolder;
+    }
 	#endregion
 }

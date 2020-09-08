@@ -13,7 +13,11 @@ public class Weapon : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        active = false;   
+        if (collision.gameObject.tag == "Hand" && active)
+        {
+            active = false;
+            GetComponent<BoxCollider>().enabled = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -22,6 +26,7 @@ public class Weapon : MonoBehaviour
         {
             Player.instance.TakeDamage(damage);
             active = false;
+            GetComponent<BoxCollider>().enabled = false;
         }
     }
 

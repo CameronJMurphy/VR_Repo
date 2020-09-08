@@ -29,4 +29,17 @@ public class GameController : MonoBehaviour
 			}
 		}
     }
+
+    public void ResetGame()
+	{
+        foreach(var spawner in spawners)
+		{
+            spawner.ResetTimerMax();
+        }
+        foreach(var item in GameObject.FindGameObjectsWithTag("Item"))
+		{
+            Destroy(item.gameObject);
+		}
+        
+	}
 }

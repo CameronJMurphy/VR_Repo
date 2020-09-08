@@ -15,7 +15,7 @@ public class GoldenApple : MonoBehaviour
         if (collision.gameObject.tag == "Hand" && active)
         {
             active = false;
-            
+            GetComponent<BoxCollider>().enabled = false;
         }
     }
 
@@ -25,6 +25,7 @@ public class GoldenApple : MonoBehaviour
         {
             active = false;
             onEatGoldenApple(invulnerableDuration);
+            GetComponent<BoxCollider>().enabled = false;
         }
     }
 

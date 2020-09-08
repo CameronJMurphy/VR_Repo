@@ -15,6 +15,7 @@ public class ClockScript : MonoBehaviour
         {
             active = false;
             onHitClock(slowTimeDuration);
+            GetComponent<BoxCollider>().enabled = false;
         }
     }
 
@@ -22,6 +23,7 @@ public class ClockScript : MonoBehaviour
     {
         if (active)
         {
+            GetComponent<BoxCollider>().enabled = false;
             active = false;
         }
     }

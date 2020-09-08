@@ -1,10 +1,18 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Bomb
+    - ChangeTextColour
+    - ClearWeapons
+    - Clock
+    - ClockScript
     - Death
     - DisplayHealth
+    - DontDestroy
     - GameController
+    - GameOverScreen
     - GlowRedCloser
+    - GoldenApple
     - GoogleVR.Demos.DemoInputManager
     - GoogleVR.Demos.DemoSceneManager
     - GoogleVR.HelloVR.HeadsetDemoManager
@@ -23,15 +31,17 @@ ScriptsOnlyBuild:
     - GvrPointerPhysicsRaycaster
     - GvrReticlePointer
     - GvrTrackedController
+    - IncreasePitch
     - InstantPreviewHelper
+    - Invulnerability
     - Player
     - ScreenWobble
     - SineWave
     - Slap
+    - SlowTime
+    - Spawner
     - StartScreen
     - Strawberry
-    - StrawberrySpawner
-    - SwordSpawner
     - Weapon
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -59,7 +69,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/GrassFlowers/Demo/DemoGrassFlowers.unity:
+    Assets/Imports/GrassFlowers/Demo/DemoGrassFlowers.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -80,11 +90,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -97,81 +113,101 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11258}
+      Script: {instanceID: 11260}
     - Class: 114
-      Script: {instanceID: 11296}
+      Script: {instanceID: 11298}
     - Class: 114
-      Script: {instanceID: 11334}
+      Script: {instanceID: 11336}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11452}
     - Class: 114
-      Script: {instanceID: 11492}
+      Script: {instanceID: 11476}
     - Class: 114
-      Script: {instanceID: 11494}
+      Script: {instanceID: 11498}
     - Class: 114
-      Script: {instanceID: 11590}
+      Script: {instanceID: 11500}
     - Class: 114
-      Script: {instanceID: 11624}
+      Script: {instanceID: 11596}
     - Class: 114
-      Script: {instanceID: 11644}
+      Script: {instanceID: 11630}
     - Class: 114
-      Script: {instanceID: 11676}
+      Script: {instanceID: 11650}
     - Class: 114
-      Script: {instanceID: 11694}
+      Script: {instanceID: 11682}
     - Class: 114
-      Script: {instanceID: 11786}
+      Script: {instanceID: 11700}
     - Class: 114
-      Script: {instanceID: 11826}
+      Script: {instanceID: 11792}
     - Class: 114
-      Script: {instanceID: 11930}
+      Script: {instanceID: 11832}
     - Class: 114
-      Script: {instanceID: 11948}
+      Script: {instanceID: 11868}
     - Class: 114
-      Script: {instanceID: 12296}
+      Script: {instanceID: 11938}
     - Class: 114
-      Script: {instanceID: 12334}
+      Script: {instanceID: 11944}
     - Class: 114
-      Script: {instanceID: 12362}
+      Script: {instanceID: 11958}
     - Class: 114
-      Script: {instanceID: 12452}
+      Script: {instanceID: 12044}
     - Class: 114
-      Script: {instanceID: 12534}
+      Script: {instanceID: 12180}
     - Class: 114
-      Script: {instanceID: 12582}
+      Script: {instanceID: 12348}
     - Class: 114
-      Script: {instanceID: 12652}
+      Script: {instanceID: 12376}
     - Class: 114
-      Script: {instanceID: 12686}
+      Script: {instanceID: 12416}
     - Class: 114
-      Script: {instanceID: 12696}
+      Script: {instanceID: 12424}
     - Class: 114
-      Script: {instanceID: 12748}
+      Script: {instanceID: 12472}
     - Class: 114
-      Script: {instanceID: 12786}
+      Script: {instanceID: 12554}
     - Class: 114
-      Script: {instanceID: 12790}
+      Script: {instanceID: 12602}
     - Class: 114
-      Script: {instanceID: 12862}
+      Script: {instanceID: 12672}
     - Class: 114
-      Script: {instanceID: 12894}
+      Script: {instanceID: 12706}
     - Class: 114
-      Script: {instanceID: 12918}
+      Script: {instanceID: 12716}
     - Class: 114
-      Script: {instanceID: 12962}
+      Script: {instanceID: 12768}
     - Class: 114
-      Script: {instanceID: 12996}
+      Script: {instanceID: 12806}
     - Class: 114
-      Script: {instanceID: 13010}
+      Script: {instanceID: 12810}
     - Class: 114
-      Script: {instanceID: 13112}
+      Script: {instanceID: 12882}
     - Class: 114
-      Script: {instanceID: 13308}
+      Script: {instanceID: 12914}
     - Class: 114
-      Script: {instanceID: 13392}
+      Script: {instanceID: 12938}
     - Class: 114
-      Script: {instanceID: 13404}
+      Script: {instanceID: 12982}
+    - Class: 114
+      Script: {instanceID: 13016}
+    - Class: 114
+      Script: {instanceID: 13030}
+    - Class: 114
+      Script: {instanceID: 13092}
+    - Class: 114
+      Script: {instanceID: 13134}
+    - Class: 114
+      Script: {instanceID: 13324}
+    - Class: 114
+      Script: {instanceID: 13332}
     - Class: 114
       Script: {instanceID: 13416}
+    - Class: 114
+      Script: {instanceID: 13428}
+    - Class: 114
+      Script: {instanceID: 13440}
+    - Class: 114
+      Script: {instanceID: 13460}
+    - Class: 114
+      Script: {instanceID: 13470}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -189,6 +225,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 218
       Script: {instanceID: 0}
@@ -226,27 +266,27 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11258}
+      Script: {instanceID: 11260}
     - Class: 114
-      Script: {instanceID: 11492}
+      Script: {instanceID: 11498}
     - Class: 114
-      Script: {instanceID: 11948}
+      Script: {instanceID: 11958}
     - Class: 114
-      Script: {instanceID: 11974}
+      Script: {instanceID: 11984}
     - Class: 114
-      Script: {instanceID: 12652}
+      Script: {instanceID: 12672}
     - Class: 114
-      Script: {instanceID: 12668}
+      Script: {instanceID: 12688}
     - Class: 114
-      Script: {instanceID: 12894}
+      Script: {instanceID: 12914}
     - Class: 114
-      Script: {instanceID: 12962}
+      Script: {instanceID: 12982}
     - Class: 114
-      Script: {instanceID: 13106}
+      Script: {instanceID: 13128}
     - Class: 114
-      Script: {instanceID: 13148}
+      Script: {instanceID: 13170}
     - Class: 114
-      Script: {instanceID: 13382}
+      Script: {instanceID: 13406}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -338,6 +378,12 @@ ScriptsOnlyBuild:
     className: GvrVideoPlayerTexture
   - hash:
       serializedVersion: 2
+      Hash: 5a892f3d29619dac76dc529951691fa0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Trigger
+  - hash:
+      serializedVersion: 2
       Hash: aeb62f729c52c814dec86c47dcac1471
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -348,6 +394,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Invulnerability
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -530,6 +582,12 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ClearWeapons
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -540,6 +598,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Death
+  - hash:
+      serializedVersion: 2
+      Hash: e66b6c37816771ebabd75be3aafa4b48
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChangeTextColour
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -572,6 +636,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 0fc40558f06c852c8e04d326ef1d03a0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Clock
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -582,6 +652,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleVR.Beta.Demos
     className: DemoObjectController6DoF
+  - hash:
+      serializedVersion: 2
+      Hash: 2a2d7b828da8a3c9b45cde8b8c2e6fa1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Bomb
   - hash:
       serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
@@ -650,10 +726,28 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
+      Hash: 5cbb105d617abe697f71dd9975d70436
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GoldenApple
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SlowTime
+  - hash:
+      serializedVersion: 2
       Hash: f84d945e5e1ca985698660fc26e9657f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 3a5f7b351d9f12f271a767b3c2ac8633
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: IfStaredAt
   - hash:
       serializedVersion: 2
       Hash: 4988ccc428c0a3d83b08d4f9c7380bf8
@@ -752,10 +846,10 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: a8f69397af02142cbaa39ac754317ffe
+      Hash: d58f73060113b5e221e4c6d6338af99b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: SwordSpawner
+    className: Spawner
   - hash:
       serializedVersion: 2
       Hash: 1cbb684877139a8fcd5903f27462e898
@@ -848,6 +942,12 @@ ScriptsOnlyBuild:
     className: fruits_tester
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DontDestroy
+  - hash:
+      serializedVersion: 2
       Hash: 13ec1fbb0991ade13261f246055b927b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -930,6 +1030,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayModeRunnerCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOverScreen
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1034,10 +1140,22 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
+      Hash: 83926add12865ffc0a5c04e903b2df4a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ClockScript
+  - hash:
+      serializedVersion: 2
       Hash: 719e5a8f63dda20dad1ba86875c22268
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleVR.VideoDemo
     className: AutoPlayVideo
+  - hash:
+      serializedVersion: 2
+      Hash: 66bca5cc6a18c5298ec75235e56a84d6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: IncreasePitch
   - hash:
       serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
@@ -1059,5 +1177,5 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/StartScreen.unity
-  - Assets/GrassFlowers/Demo/DemoGrassFlowers.unity
-  playerPath: E:/School/AIE New/VR/VR_Repo/VR/bin/Dont Eat Swords Prototype1.apk
+  - Assets/Imports/GrassFlowers/Demo/DemoGrassFlowers.unity
+  playerPath: E:/School/AIE New/VR/VR_Repo/VR/bin/Dont Eat Swords BetaV1.apk
